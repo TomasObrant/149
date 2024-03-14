@@ -1,0 +1,17 @@
+### Send POST request with json body
+POST http://localhost:3100/loki/api/v1/push
+Content-Type: application/json
+
+{
+  "streams": [
+    {
+      "stream": {
+        "label": "test"
+      },
+      "values": [
+        [ "1710424580000000000", "Error log message 1" ],
+        [ "1710424580000000000", "Error log message 2" ]
+      ]
+    }
+  ]
+}
